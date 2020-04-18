@@ -1,0 +1,14 @@
+方便的切换JAVA_HOME:
+  在Mac OS X 10.5之后，在 /usr/libexec/ 路径下多了一个叫java_home文件，这是Mac上专门用来管理JAVA_HOME的文件，我们可以靠它轻松得到不同版本的JAVA_HOME
+vim ~/.bash_profile
+
+
+export JAVA_8_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_10_HOME=`/usr/libexec/java_home -v 10.0`
+export JAVA_HOME=$JAVA_10_HOME
+
+source  ~/.bash_profile
+
+
+命令行执行   $JAVA_HOME
+/Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home
